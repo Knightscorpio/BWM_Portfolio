@@ -1,2 +1,1321 @@
-# BWM_Portfolio
- This is my soul work system for branding for MVPS, founders and all! Branding With Intentionality
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandingWithMo | Strategic Brand Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --mo-indigo: #3C3C7B;
+            --culture-cream: #FFF3E6;
+            --terracotta-vibe: #D87D4A;
+            --shadow-graphite: #1C1C1C;
+            --accent-mint: #B9E4C9;
+            --pure-white: #FFFFFF;
+            --soft-gray: #F8F9FA;
+            --light-indigo: #5c5c9e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--shadow-graphite);
+            background: linear-gradient(135deg, var(--culture-cream) 0%, var(--accent-mint) 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(60, 60, 123, 0.1);
+            border-bottom: 2px solid var(--accent-mint);
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--mo-indigo);
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--terracotta-vibe);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--shadow-graphite);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta-vibe);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta-vibe);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--mo-indigo);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--mo-indigo) 0%, var(--terracotta-vibe) 100%);
+            color: var(--pure-white);
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: -60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="afro-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23afro-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--accent-mint);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-primary {
+            background: var(--terracotta-vibe);
+            color: var(--pure-white);
+            box-shadow: 0 4px 20px rgba(216, 125, 74, 0.4);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(216, 125, 74, 0.6);
+            background: #c76d3d;
+        }
+
+        .cta-secondary {
+            border: 2px solid var(--accent-mint);
+            color: var(--accent-mint);
+            background: transparent;
+        }
+
+        .cta-secondary:hover {
+            background: var(--accent-mint);
+            color: var(--mo-indigo);
+        }
+
+        /* Main Content */
+        main {
+            background: var(--pure-white);
+            border-radius: 40px 40px 0 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        /* About Moses Section */
+        .about-moses {
+            background: var(--soft-gray);
+            position: relative;
+            justify-content: flex-end;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--mo-indigo), var(--terracotta-vibe));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,25 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            justify-content: space-around;
+        }
+
+        .highlight {
+            color: var(--terracotta-vibe);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* PMSCG Model */
+        .pmscg-model h2 {
+            color: var(--mo-indigo);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .pmscg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pmscg-card {
+            background: var(--pure-white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(60, 60, 123, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--terracotta-vibe);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pmscg-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--mo-indigo), var(--terracotta-vibe));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pmscg-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .pmscg-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(60, 60, 123, 0.2);
+        }
+
+        .pmscg-letter {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--terracotta-vibe);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .pmscg-title {
+            color: var(--mo-indigo);
+            margin-bottom: 1rem;
+        }
+
+        .deliverables {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--culture-cream);
+        }
+
+        .deliverables h5 {
+            color: var(--terracotta-vibe);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .deliverables ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .deliverables li {
+            margin-bottom: 0.3rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .deliverables li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-mint);
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--culture-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--mo-indigo), var(--terracotta-vibe));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--pure-white);
+            font-size: 2rem;
+        }
+
+        /* Client Showcase */
+        .client-showcase {
+            background: linear-gradient(135deg, var(--accent-mint) 0%, var(--light-indigo) 100%);
+            padding: 80px 0;
+            color: var(--pure-white);
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .client-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .client-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--pure-white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .testimonial-form {
+            background: var(--soft-gray);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--shadow-graphite);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--culture-cream);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--terracotta-vibe);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--mo-indigo), var(--terracotta-vibe));
+            color: var(--pure-white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(60, 60, 123, 0.3);
+        }
+
+        .testimonials-display {
+            background: var(--soft-gray);
+            border-radius: 20px;
+            padding: 3rem;
+            height: 100%;
+        }
+
+        .testimonial {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--accent-mint);
+            position: absolute;
+            top: -20px;
+            left: 15px;
+            font-family: 'Playfair Display', serif;
+            opacity: 0.3;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .client-info {
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--culture-cream);
+        }
+
+        .client-name {
+            font-weight: 600;
+            color: var(--mo-indigo);
+            font-size: 1.1rem;
+        }
+
+        .client-details {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .referral-badge {
+            background: linear-gradient(135deg, var(--terracotta-vibe), var(--accent-mint));
+            color: var(--pure-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--mo-indigo) 0%, var(--terracotta-vibe) 100%);
+            color: var(--pure-white);
+            text-align: center;
+            position: relative;
+            padding: 100px 0;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-pattern)"/></svg>');
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            min-width: 280px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .special-offer {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .special-offer h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--shadow-graphite);
+            color: var(--pure-white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-mint);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 140px 0 80px;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo"><i class="fas fa-crown"></i>BrandingWithMo</a>
+            <button class="mobile-menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About Mo</a></li>
+                <li><a href="#pmscg">PMSCG Model</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>BrandingWithMo</h1>
+                <p class="hero-tagline">Think it. Brand it. Become it. Where vision meets strategy.</p>
+                <p>Transforming ideas into identity, and identity into influence through soul work turned system. I
+                    build for entrepreneurs, thinkers, and visionaries who aren't just trying to show up online, but
+                    trying to SHOW UP in alignment, in power, and in profit.</p>
+                <div class="cta-group">
+                    <a href="#pmscg" class="cta-btn cta-primary">Discover PMSCG Model</a>
+                    <a href="#contact" class="cta-btn cta-secondary">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="section about-moses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Strategic Brand Development</h2>
+                    <p>Building brands that resonate, influence, and endure through soul work turned system</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="/Users/user/Downloads/IMG_5467.jpg" alt="" class="about-image">
+
+                    </div>
+                    <div class=" about-text">
+                        <h2>Hey, I go by <span class="highlight">MO</span></h2>
+                        <p>This is me building brands, creating systems, and scaling businesses through meaning and
+                            mastery. BrandingWithMo is my space to connect the dots between <span
+                                class="highlight">creative clarity, data, digital strategy, and soulful
+                                storytelling</span>.</p>
+
+                        <p>Over time, I developed what I call the <span class="highlight">PMSCG Model</span>. It's my
+                            signature blueprint; not a theory, but a <span class="highlight">battle-tested
+                                framework</span> I've used to help creators, businesses, and even myself get it together
+                            and grow with results.</p>
+
+                        <p>Every project I take on MUST begin with the extraction of the <span class="highlight">"10
+                                Reasons Why This Business Was Chosen"</span> by the client. This isn't just a formality
+                            — it's the entry requirement to work with BrandingWithMo. It gives logic to identity, and
+                            grounds every creative move in solid clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pmscg" class="section pmscg-model">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The PMSCG Model</h2>
+                    <p>A battle-tested framework that transforms businesses from concept to market dynasty. This isn't
+                        just theory—it's soul work turned system.</p>
+                </div>
+
+                <div class="pmscg-grid">
+                    <div class="pmscg-card">
+                        <div class="pmscg-letter">P</div>
+                        <h3 class="pmscg-title">Production</h3>
+                        <p><strong>The Foundation: Where Clarity Meets Action</strong></p>
+                        <p>Every project begins with a production and logical framework rooted in WHY, TO and FOR
+                            strategy. We extract the core essence of what your brand is really about.</p>
+                        <div class="deliverables">
+                            <h5>Deliverables:</h5>
+                            <ul>
+                                <li>Brand Production Sheet</li>
+                                <li>Business Purpose Manifesto</li>
+                                <li>Brand Story Draft</li>
+                                <li>Identity Map</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pmscg-card">
+                        <div class="pmscg-letter">M</div>
+                        <h3 class="pmscg-title">Marketing</h3>
+                        <p><strong>The Visibility Engine</strong></p>
+                        <p>We don't market like we're trying to go viral. We market like we're building a dynasty. Every
+                            move is strategic, intentional, and designed for sustainable growth.</p>
+                        <div class="deliverables">
+                            <h5>Deliverables:</h5>
+                            <ul>
+                                <li>Social Media Kit</li>
+                                <li>Content Calendar + Templates</li>
+                                <li>Hashtag Vault</li>
+                                <li>Marketing Clarity Sheet</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pmscg-card">
+                        <div class="pmscg-letter">S</div>
+                        <h3 class="pmscg-title">Sales</h3>
+                        <p><strong>Where Everything Turns to Cashflow</strong></p>
+                        <p>We build sales systems that actually sell without sounding salesy. It's about emotional
+                            anchoring + urgency that converts prospects into paying customers.</p>
+                        <div class="deliverables">
+                            <h5>Deliverables:</h5>
+                            <ul>
+                                <li>Offer Deck</li>
+                                <li>Landing Page Copy</li>
+                                <li>Email/SMS Scripts</li>
+                                <li>Sales Dashboard Template</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pmscg-card">
+                        <div class="pmscg-letter">C</div>
+                        <h3 class="pmscg-title">Customer Retention</h3>
+                        <p><strong>Keeping Clients Warm, Loud & Loyal</strong></p>
+                        <p>This is where a lot of businesses flop — but this is where WE warm hearts. Through
+                            intentional client gestures and strategic experience mapping.</p>
+                        <div class="deliverables">
+                            <h5>Deliverables:</h5>
+                            <ul>
+                                <li>Customer Journey Map</li>
+                                <li>Hospitality Strategy</li>
+                                <li>Referral Kit Template</li>
+                                <li>Brand Loyalty Flowchart</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pmscg-card">
+                        <div class="pmscg-letter">G</div>
+                        <h3 class="pmscg-title">Growth</h3>
+                        <p><strong>Data-Guided, Intentionally Designed Progress</strong></p>
+                        <p>Growth isn't a fluke; it's a plan. Using market data insights, quarterly goal mapping, and
+                            micro-milestone planning.</p>
+                        <div class="deliverables">
+                            <h5>Deliverables:</h5>
+                            <ul>
+                                <li>Brand Growth Blueprint</li>
+                                <li>Competitive Data Snapshot</li>
+                                <li>KPI Tracking Sheet</li>
+                                <li>Niche Expansion Plan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Core Offerings</h2>
+                    <p>Comprehensive brand development services that transform vision into profitable reality</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Brand Identity Design</h3>
+                        <p>Complete visual identity systems including logos, color palettes, typography, moodboards, and
+                            comprehensive brand style guides that capture your authentic essence.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Strategy & Positioning</h3>
+                        <p>Deep brand archetyping, strategic messaging development, target audience blueprints, and
+                            competitive differentiation maps that position you powerfully in the market.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Social Media & Launch Systems</h3>
+                        <p>Strategic content pillars, caption strategies, branded Canva templates, and comprehensive
+                            30-day launch calendars for Instagram, Twitter, and WhatsApp.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏛️</div>
+                        <h3>Cultural-Fusion Brand Kits</h3>
+                        <p>Unique product and culture packaging including merch design, Adire-inspired aesthetics,
+                            Afro-minimalist brand expressions, and cultural storytelling integration.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Brand Management & Evolution</h3>
+                        <p>Ongoing strategy sessions, brand refreshes, campaign planning, and collaborative project
+                            management for web development, events, and strategic partnerships.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Templates & Systems</h3>
+                        <p>Proven frameworks, branded proposal templates, client onboarding kits, case study
+                            repositories, and digital products that streamline your brand operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="client-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Signature Collaborations</h2>
+                    <p>Brands that have transformed through strategic partnership</p>
+                </div>
+
+                <div class="client-grid">
+                    <div class="client-card">
+                        <h4>YorubaEcho</h4>
+                        <p>Cultural-tech ecosystem branding</p>
+                    </div>
+                    <div class="client-card">
+                        <h4>Franciscajae</h4>
+                        <p>Dev & design agency branding</p>
+                    </div>
+                    <div class="client-card">
+                        <h4>MAGJewels</h4>
+                        <p>Fashion & Lifestyle Brand</p>
+                    </div>
+                    <div class="client-card">
+                        <h4>Tehya</h4>
+                        <p>Fashion & Lifestyle Brand</p>
+                    </div>
+                    <div class="client-card">
+                        <h4>Kikiluv Store</h4>
+                        <p>Fashion & Lifestyle Brand</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Client Testimonials</h2>
+                    <p>Hear from entrepreneurs who've transformed their brands through strategic partnership</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-form">
+                        <h3>Share Your Experience</h3>
+                        <form id="testimonialForm">
+                            <div class="form-group">
+                                <label for="clientName">Your Name/Business Name *</label>
+                                <input type="text" id="clientName" name="clientName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="brand-identity">Brand Identity Design</option>
+                                    <option value="pmscg-full">Full PMSCG Implementation</option>
+                                    <option value="strategy">Strategy & Positioning</option>
+                                    <option value="social-media">Social Media & Launch Systems</option>
+                                    <option value="brand-management">Brand Management</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="testimonialText">Your Testimonial *</label>
+                                <textarea id="testimonialText" name="testimonialText" rows="5"
+                                    placeholder="Share your experience working with BrandingWithMo..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rating">Rating *</label>
+                                <select id="rating" name="rating" required>
+                                    <option value="">Select Rating</option>
+                                    <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
+                                    <option value="4">⭐⭐⭐⭐ (4 stars)</option>
+                                    <option value="3">⭐⭐⭐ (3 stars)</option>
+                                    <option value="2">⭐⭐ (2 stars)</option>
+                                    <option value="1">⭐ (1 star)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Testimonial</button>
+                        </form>
+
+                        <div class="special-offer">
+                            <h3>🎉 Referral Bonus</h3>
+                            <p>Clients referred through you automatically receive a 15% discount on their first project!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-display">
+                        <h3>What Clients Say</h3>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                "Working with Mo transformed my business. The PMSCG model gave me a clear roadmap that
+                                I've been able to follow for sustainable growth. My brand identity now truly reflects my
+                                vision."
+                            </div>
+                            <div class="client-info">
+                                <div class="client-name">Francisca Jae</div>
+                                <div class="client-details">Dev & Design Agency Owner</div>
+                                <div class="referral-badge">Available for referrals</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                "The cultural-fusion brand kit Mo created for my jewelry business captured my vision
+                                perfectly. Sales increased by 65% in the first quarter after implementing the strategy."
+                            </div>
+                            <div class="client-info">
+                                <div class="client-name">MagJewels</div>
+                                <div class="client-details">Fashion & Lifestyle Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                "The '10 Reasons Why' exercise completely changed how I approach my business. It brought
+                                so much clarity that now every decision aligns with my core purpose. Worth every penny!"
+                            </div>
+                            <div class="client-info">
+                                <div class="client-name">Temi Adeyemi</div>
+                                <div class="client-details">Wellness Entrepreneur</div>
+                                <div class="referral-badge">Available for referrals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="section-header">
+                        <h2>Let's Build Your Brand</h2>
+                        <p>Ready to transform your vision into a powerful brand identity?</p>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+234 810 000 7877</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>brandingwithmo@outlook.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h3>Instagram</h3>
+                                <p>@BrandingWithMo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-offer">
+                        <h3>Special Offer for New Clients</h3>
+                        <p>Mention this portfolio when contacting us and receive a complimentary Brand Clarity Session
+                            ($100 value) with your first project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">BrandingWithMo</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 BrandingWithMo. All rights reserved. | Think it. Brand it. Become it. Where Vision meets
+                strategy.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                navLinks.classList.remove('show');
+
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('testimonialForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your testimonial! It has been submitted successfully.');
+            this.reset();
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.pmscg-card, .service-card, .client-card, .section-header').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+
+</html>
